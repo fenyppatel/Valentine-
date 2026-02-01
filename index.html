@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>💖</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: pink;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      text-align: center;
+      position: relative;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    #yes {
+      font-size: 40px;
+      padding: 20px 50px;
+      background: red;
+      color: white;
+      border: none;
+      border-radius: 12px;
+    }
+
+    #no {
+      font-size: 20px;
+      padding: 10px 20px;
+      position: absolute;
+      top: 60%;
+      left: 10%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Will you be my Valentine? 💘</h1>
+
+    <!-- BIG YES CENTER -->
+    <button id="yes" onclick="yesClicked()">YES ❤️</button>
+
+    <!-- NO RUNNING -->
+    <button id="no">NO 🙈</button>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("no");
+
+    noBtn.addEventListener("mouseover", () => {
+      const maxWidth = window.innerWidth - 100;
+      const randomX = Math.random() * maxWidth;
+      noBtn.style.left = randomX + "px";
+    });
+
+    function yesClicked() {
+      document.body.innerHTML =
+        "<h1 style='color:red;font-size:50px;text-align:center;'>YAY!!! ❤️😍</h1>";
+    }
+  </script>
+</body>
+</html>
