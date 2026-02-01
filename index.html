@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>💘</title>
+<style>
+body {
+  background: pink;
+  text-align: center;
+  font-family: Arial;
+  height: 100vh;
+}
+button {
+  font-size: 22px;
+  padding: 10px 25px;
+}
+#no {
+  position: absolute;
+}
+</style>
+</head>
+
+<body>
+<h1>Will you be my Valentine? 💖</h1>
+
+<button onclick="yes()">YES ❤️</button>
+<button id="no">NO 🙈</button>
+
+<script>
+const noBtn = document.getElementById("no");
+
+noBtn.onmouseover = function() {
+  noBtn.style.left = Math.random()*300 + "px";
+};
+
+function yes() {
+  document.body.innerHTML = "<h1>YAY!!! ❤️😍</h1>";
+}
+</script>
+
+</body>
+</html>
